@@ -23,6 +23,14 @@
         </ul>
       </nav>
       <input type="button" value="View Resume" />
+      
+      <input type="checkbox" checked name="theme-switch" id="theme-switch" />
+      <label for="theme-switch" >
+        <span>🌙</span>
+        <div class="switch" ></div>
+        <span>☀️</span>
+      </label>
+      
     </header>
     
     <div class="hero" id="home">
@@ -34,15 +42,15 @@
 
     <section id="about">
       <h2>About</h2>
-      <div>
+      <article class="about-box">
         <h3>"Who am I?"</h3><br>
-        <p>Good question. Great movie.</p>
+        <p>Good question. Great movie.</p> <!--Add tooltip for "Who am I"-->
 
         <p>A life-long nerd (before it was cool). I've learned some degree of every aspect of computers from hardware, to networking, and now an intense study of software and web development. With a heavy focus on the node.js tech stack. Coding has always been a hobby, and now I want to make it my career.</p>
 
         <p>My work experience over the last twenty years has spanned across many disciplines such as tech support, fire protection engineering, and even coding instructor. This work has required effective communication skills, more than anything else. But in addition to that, it's given me a well-rounded experience to be able to imagine and manage the entire development process from my own perspective, the larger company perspective, and importantly: the perspective of the end user. I care about what I do, and who I do it for.</p>
-      </div>
-      <div id="tech-stack">
+      </article>
+      <div id="tech-stack" class="about-box">
         <h3>Skills</h3>
         <div class="tech-icons">
           <i class="devicon-html5-plain" title="HTML"></i>
@@ -100,6 +108,8 @@
       </form>
     </section>
     
-    <script src="script.js" async defer></script>
+    <script src="script.js" async defer></script>    
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.35.3/tsparticles.min.js" ></script>
+    <script src="particles.js" async defer></script>
   </body>
 </html>

@@ -1,9 +1,12 @@
 // https://www.npmjs.com/package/ng-particles
+let primaryColor = getComputedStyle(document.documentElement).getPropertyValue("--primary-color");
 
-const particlesJSON = {
+themeSwitch.addEventListener('change', updateParticleColor);
+
+let particlesJSON = {
   backgroundMode: {
     enable: true,
-    zIndex: 0
+    zIndex: -1
   },
   fpsLimit: 60,
   particles: {
@@ -16,39 +19,33 @@ const particlesJSON = {
     },
     color: {
       //The color for every node, not the connecting lines.
-      value: "#01579b" //Or use an array of colors like ["#9b0000", "#001378", "#0b521f"]
+      value: primaryColor //Or use an array of colors like ["#9b0000", "#001378", "#0b521f"]
     },
     shape: {
       type: "circle", // Can show circle, edge (a square), triangle, polygon, star, img, or an array of multiple.
       stroke: {
         //The border
         width: 1,
-        color: "#145ea8"
+        color: primaryColor
       },
       polygon: {
         //if the shape is a polygon
         nb_sides: 5
-      },
-      image: {
-        //If the shape is an image
-        src: "",
-        width: 100,
-        height: 100
       }
     },
     opacity: {
-      value: 0.7,
+      value: 0.3,
       random: true
     },
     size: {
-      value: 10,
+      value: 3,
       random: true
     },
     line_linked: {
       enable: true,
       distance: 200, //The radius before a line is added, the lower the number the more lines.
-      color: "#007ecc",
-      opacity: 0.5,
+      color: primaryColor,
+      opacity: 0.2,
       width: 2
     },
     move: {
@@ -111,3 +108,17 @@ const particlesJSON = {
 };
 
 tsParticles.load("tsparticles", particlesJSON);
+
+function updateParticleColor() {
+  primaryColor = getComputedStyle(document.documentElement).getPropertyValue("--primary-color");
+  
+  let {color, shape, line_linked} = particlesJSON.particles;
+
+  color.value = primaryColor;
+  shape.stroke.color = primaryColor;
+  line_linked.color = primaryColor;
+
+  tsParticles.load("tsparticles", particlesJSON);
+}
+
+
