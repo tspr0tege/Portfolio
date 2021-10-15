@@ -1,4 +1,6 @@
 // https://www.npmjs.com/package/ng-particles
+import themeSwitch from './script.js';
+
 let primaryColor = getComputedStyle(document.documentElement).getPropertyValue("--primary-color");
 
 themeSwitch.addEventListener('change', updateParticleColor);
