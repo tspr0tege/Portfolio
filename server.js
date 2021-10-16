@@ -46,6 +46,10 @@ app.post('/email', (req, res) => {
   });
 });
 
+app.get('/files/:fileName', (req, res) => {  
+  res.sendFile(`./files/${req.params.fileName}`);
+});
+
 async function sendEmail(name, email, message) {
   return (
     transporter.sendMail({
