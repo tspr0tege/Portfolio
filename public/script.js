@@ -1,6 +1,11 @@
 const emailForm = document.getElementById('contact-form');
 const themeSwitch = document.getElementById('theme-switch');
 
+themeSwitch.addEventListener('change', e => {
+  let theme = (e.target.checked) ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', theme);  
+});
+
 emailForm.addEventListener('submit', e => {
   e.preventDefault();
   let {name, email, message} = e.target;
@@ -17,11 +22,6 @@ emailForm.addEventListener('submit', e => {
   .catch(error => {
     console.error(error);
   });
-});
-
-themeSwitch.addEventListener('change', e => {
-  let theme = (e.target.checked) ? 'dark' : 'light';
-  document.documentElement.setAttribute('data-theme', theme);  
 });
 
 function emailSent() {
