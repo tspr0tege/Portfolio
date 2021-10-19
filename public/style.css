@@ -3,6 +3,7 @@
   --primary-text:#eee;
   --primary-bg:#111;
   --secondary-bg:#222;
+  --tertiary-bg: #333;
 
   --header-bg: linear-gradient(#000, #333);
   --hero-bg: linear-gradient(rgba(50,50,50,0.8), rgba(50,0,0,0.8)), url("./images/circuit-bg.jpg");
@@ -17,6 +18,7 @@
   --primary-text:#eee;
   --primary-bg:#111;
   --secondary-bg:#222;
+  --tertiary-bg: #333;
 
   --header-bg: linear-gradient(#000, #333);
   --hero-bg: linear-gradient(rgba(50,50,50,0.8), rgba(50,0,0,0.8)), url("./images/circuit-bg.jpg");
@@ -31,6 +33,7 @@
   --primary-text:#111;
   --primary-bg:#eee;
   --secondary-bg:#ddd;
+  --tertiary-bg: #ccc;
 
   --header-bg: linear-gradient(#eee, #ccc);
   --hero-bg: linear-gradient(rgba(220,220,250,0.8), rgba(150,150,250,0.7)), url("./images/circuit-bg.jpg");
@@ -222,8 +225,9 @@ header input {
 }
 
 .project-card {
-  color: var(--primary-bg);
-  background-color: var(--primary-text);
+  font-size: 1.3em;
+  color: var(--primary-text);
+  background-color: var(--tertiary-bg);
   height: 400px;
   width: 400px;
   border-radius: 40px;
@@ -235,6 +239,19 @@ header input {
 .project-card:hover {
   transform: scale(1.1);
   box-shadow: 10px 10px 15px rgba(0,0,0,0.4);
+}
+
+.project-card > div {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+  height: 270px;
+  border-radius: 4px 4px 10px 10px;
+  opacity: 0.75;
+}
+
+.project-card > div:hover {
+  opacity: 1;
 }
 
 #contact form {
@@ -271,4 +288,31 @@ a {
 
 h2 {
   font-size: 3em;
+}
+
+/* MODAL */
+
+#projects iframe {
+  display: none;
+}
+
+.modal-screen #modal-screen {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.7);
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+
+.modal-screen #modal-screen iframe {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60vh;
+  width: 60vw;
+  border-radius: 20px;
 }

@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+
+    <script>
+      function modalOn () {
+        document.querySelector("#projects").classList.add("modal-screen");
+      }
+      function modalOff () {
+        document.querySelector("#projects").classList.remove("modal-screen");
+      }
+    </script>
   </head>
   <body>
 
@@ -85,16 +94,32 @@
     
     <section id="projects">
       <h2>Projects</h2>
+      <div id="modal-screen" onclick="modalOff()" >
+        <iframe src="" name="modal-box" frameborder="0"></iframe>
+      </div>
       <div id="project-container">
-        <div class="project-card">
-          <h3>Scanner Game</h3>
-        </div>
-        <div class="project-card">
-          <h3>Retail Portal</h3>
-        </div>
-        <div class="project-card">
-          <h3>Quest Log</h3>
-        </div>
+
+        <a href="./previews/weather-app.html" onclick="modalOn()" target="modal-box">
+          <div class="project-card">
+            <h3>Weather App</h3>
+            <div>
+              <img src="./images/weather-app.jpg" alt="Weather app preview image">
+            </div>
+          </div>
+        </a>
+
+        <a href="./previews/retail-portal.html" onclick="modalOn()" target="modal-box">
+          <div class="project-card">
+            <h3>Retail Portal</h3>
+          </div>
+        </a>
+
+        <a href="./previews/quest-log.html" onclick="modalOn()" target="modal-box">
+          <div class="project-card">
+            <h3>Quest Log</h3>
+          </div>
+        </a>
+
       </div>
     </section>
     
