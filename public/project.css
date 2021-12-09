@@ -1,7 +1,10 @@
+body {
+  background-color: var(--secondary-bg);
+}
+
 #main-container {
   height: 100vh;
   width: 100vw;
-  background-color: var(--secondary-bg);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11,8 +14,8 @@
   grid-auto-flow: column;
   padding: 40px;
   gap: 40px;
-  justify-items: center;
-  align-items: center;
+  justify-items: start;
+  align-items: start;
   border-radius: 20px;;
 }
 
@@ -24,4 +27,27 @@
 
 .host-locations {
   text-align: center;
+}
+
+p {
+  text-indent: 1em;
+  margin-top: 1em;
+}
+
+.flexbox20 {
+  display: flex;
+  column-gap: 20px;
+}
+
+.preview-img-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.preview-img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+
 }

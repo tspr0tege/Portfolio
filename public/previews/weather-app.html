@@ -10,17 +10,33 @@
   <body>
     <div id="main-container">
       <!-- Photo - Video - Github - Live Link - Description -->
-      <div>        
+      <div>
+        <h3>Preview:</h3>       
         <img src="../images/weather-app.jpg" />
       </div>
       <div class="host-locations">
         <h3>Take a closer look:</h3><br/>
-        <a href="https://github.com/tspr0tege/Weather-App" target="_blank"><i class="devicon-github-original" title="View on Github"></i></a>
-        <!-- <a href=""><i class="devicon-heroku-original" title="Heroku"></i></a> -->
+        <div style="display: flex; column-gap: 20px;">
+          <div>
+            <a href="https://github.com/tspr0tege/Weather-App" target="_blank">
+              <i class="devicon-github-original" title="View the code on Github"></i>
+              <p>Repository</p>
+            </a>
+          </div>
+          <div>
+            <a href="http://leonhart-weather.herokuapp.com" target="_blank">
+              <i class="devicon-heroku-original" title="View heroku site"></i>
+              <p>Live site</p>
+            </a>
+          </div>
+        </div>
       </div>
       <div>
-        <h3>Weather App</h3><br/>
-        <p>This is a micro-project I chose as a way to practice using an API.</p>
+        <h3>Weather App</h3>
+        <p>The obligitory weather app!</p>
+        <p>Built using React with Webpack, the app sends API requests to the RapidAPI US weather service. Necessary login credentials are secured in the back-end using env variables and the project is currently hosted on Heroku.</p>
+        <p>Project to be converted to a React Native app.</p>
+        <p><b>PLEASE NOTE:</b> this project is hosted on a free Heroku dyno. It will take approximately 30 seconds to load the live site.</p>
       </div>
       <div class="project-stack">
         <h3>Technologies Utilized:</h3><br/>

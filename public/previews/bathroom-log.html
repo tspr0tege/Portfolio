@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../project.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      h2 {
+        font-size: 8em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-container">
+      <!-- Photo - Video - Github - Live Link - Description -->
+      <div>
+        <h3>Preview:</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/h5QrpIp09cI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="host-locations">
+        <h3>Take a closer look:</h3><br/>
+        <div style="display: flex; column-gap: 20px;">
+          <a href="https://github.com/tspr0tege/bathroom-log" target="_blank">
+            <i class="devicon-github-original" title="View the code on Github"></i>
+            <p>Repository</p>
+          </a>
+          <a href="https://tspr0tege.github.io/bathroom-log/" target="_blank">
+            <i class="devicon-github-original" title="View Github Page"></i>
+            <p>Live Page</p>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3>Bathroom Log</h3>
+        <p>I created this for a grade school teacher who wanted an app on his computer to log students' time-in/time-out for bathroom breaks. The laptop already had hardware and software to scan cards, which returned a name string and "enter". Which is what I used for form submission. And in order to make focusing on the form field easy for the teacher, clicking anywhere on the interface focuses on the text input.</p>
+
+        <p>
+        Part of the challenge (and reason for its structure) was that he was using a Chromebook and really needed something basic. Since I was not able to use a back-end, there wasn't any reasonable way to create an in-app management system for updating his student list, or saving the logs. So I created the app entirely as a front-end page, and walked him through how to input new names in a seperate js file I created solely for that purpose. I also created a tutorial video showing how everything works, and how to back-up the localStorage JSON object, should he feel the need.
+        </p>
+      </div>
+      <div class="project-stack">
+        <h3>Technologies Utilized:</h3><br/>
+        <i class="devicon-html5-plain" title="HTML"></i>
+        <i class="devicon-css3-plain" title="CSS"></i>
+        <i class="devicon-javascript-plain" title="Javascript"></i>
+      </div>
+    </div>
+  </body>
+</html>

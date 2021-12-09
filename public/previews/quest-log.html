@@ -5,22 +5,71 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../project.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-    <style>
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-      }
-
-      h2 {
-        font-size: 8em;
-        text-align: center;
-      }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">    
   </head>
+
   <body>
-    <h2>COMING SOON...</h2>
+    <div id="main-container">
+      <!-- Photo - Video - Github - Live Link - Description -->
+      <div class="preview-img-container">
+        <h3>Preview:</h3>     
+        <img src="../images/quest-log.jpg" />
+      </div>
+      <div class="host-locations">
+        <h3>Take a closer look:</h3><br/>
+        <div class="flexbox20">
+          <div>
+            <h4>Original:</h4>
+            <div class="flexbox20">
+              <div>
+                <a href="https://github.com/tspr0tege/quest-log-deprecated" target="_blank">
+                  <i class="devicon-github-original" title="View the code on Github"></i>
+                  <p>Repository</p>
+                </a>
+              </div>
+              <div>
+                <a href="http://quest-log-app.herokuapp.com/" target="_blank">
+                  <i class="devicon-heroku-original" title="View heroku site"></i>
+                  <p>Live site</p>
+                </a>
+              </div>
+            </div>  
+          </div>
+
+          <div>
+            <h4>Rewrite:</h4>
+            <div class="flexbox20">
+              <div>
+                <a href="https://github.com/tspr0tege/quest-log" target="_blank">
+                  <i class="devicon-github-original" title="View the code on Github"></i>
+                  <p>Repository</p>
+                </a>
+              </div>
+              <div>
+                <a href="http://new-quest-log.herokuapp.com/" target="_blank">
+                  <i class="devicon-heroku-original" title="View heroku site"></i>
+                  <p>Live site</p>
+                </a>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>Quest Log</h3>
+        <p>This project has seen several permutations already, and will see many more. Originally started as a two-day sprint MVP project, I decided to develop it out a little more. However, after returning to it some months later, I realized I could vastly improve it's entire structure and so I've set out to completely rewrite it from the ground up. What you see here, is the current progress as of 12/9/2021</p>
+        <p>Both the original and the rewrite are hosted on Heroku. The old one has much more put into design (even if it is still fairly amateurish), but the code in the new version is much more robust, well-written, and scalable. Also, for the rewrite I have decided to focus on one core aspect, instead of 3 at once.</p>
+        <p>Ultimately, this project will be deployed to AWS, and utilize a Mongo database. Currently, it's in a 'demo' production phase and can be used by anyone, with localStorage used to save input.</p>
+      </div>
+      <div class="project-stack">
+        <h3>Technologies Utilized:</h3><br/>
+        <i class="devicon-html5-plain" title="HTML"></i>
+        <i class="devicon-css3-plain" title="CSS"></i>
+        <i class="devicon-javascript-plain" title="Javascript"></i>
+        <i class="devicon-react-original" title="React"></i>
+        <i class="devicon-webpack-plain" title="Webpack"></i>
+        <i class="devicon-babel-plain" title="Babel"></i>
+      </div>
+    </div>
   </body>
 </html>
